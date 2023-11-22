@@ -1,6 +1,7 @@
 import pandas as pd
 from openai import OpenAI, chat
 import docx
+import csv
 
 client = OpenAI(api_key="sk-q4pvdpXQRl1kFJ3w5NLsi4HXtl9zBXIPp9")
 def cmp_de_en(de, en):
@@ -78,7 +79,7 @@ else:
 
 #save file
 while True:
-    file_type = input("Machine Number:")
+    file_type = input("Enter file type:")
     if file_type == "csv" or file_type == "txt":
         break
     print("please enter 'txt' or 'csv'")
