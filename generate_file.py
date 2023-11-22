@@ -44,30 +44,53 @@ for i in doc.paragraphs:
             else:
                 Master[i.text[0:p]]=i.text[p + 2:]
 
-
+#generating dict
 machine_number = input("Machine Number:")
 
-file_path = "Machine/m"+machine_number+"/"+machine_number+"_f.xlsx"
+if machine_number == "100223" or machine_number == "100261" or machine_number == 752937:
 
-df = pd.read_excel(file_path, engine='openpyxl')
-Machine = {}
-l = len (df['Machine type:'])
+    file_path = "Machine/m"+machine_number+"/"+machine_number+"_f.xlsx"
 
-for i in range(3, l):
-    Machine[df['Machine type:'][i]] = df['Unnamed: 1'][i]
+    df = pd.read_excel(file_path, engine='openpyxl')
+    Machine = {}
+    l = len (df['Machine type:'])
 
-
-code_in = {}
-code_out = {}
+    for i in range(3, l):
+        Machine[df['Machine type:'][i]] = df['Unnamed: 1'][i]
 
 
-for mach_key in Machine.keys():
-    for mst_key in Master.keys():
-        #print(str(mach_key)+" "+mst_key)
-        if " "+str(mach_key)+"-" in mst_key+"-":
-            if cmp_de_en(Master[mst_key],Machine[mach_key])== "Yes":
-                code_in[mst_key] = Machine[mach_key]
-                break
-    code_out[mach_key] = Machine[mach_key]
+    code_in = {}
+    code_out = {}
 
-print(len(code_out.keys()))
+    print("Generating file ...")
+    for mach_key in Machine.keys():
+        for mst_key in Master.keys():
+            #print(str(mach_key)+" "+mst_key)
+            if " "+str(mach_key)+"-" in mst_key+"-":
+                if cmp_de_en(Master[mst_key],Machine[mach_key])== "Yes":
+                    code_in[mst_key] = Machine[mach_key]
+                    break
+        code_out[mach_key] = Machine[mach_key].replace("\n", " ")
+else:
+    print("Machine not found")
+
+
+
+#save file
+while True:
+    file_type = input("Machine Number:")
+    if file_type == "csv" or file_type == "txt":
+        break
+    print("please enter 'txt' or 'csv'")
+
+if file_type == "csv":
+    with open("report_"+machine_number+".csv", 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        for key, value in code_out.items():
+           writer.writerow([key, value])
+    print("Saved to csv file")
+elif file_type == "txt":
+    with open("report_"+machine_number+".txt", 'w') as file:
+        for key, value in code_out.items():
+            file.write(f"FaultNo.:{key} corresponds to: {value}\n")
+    print("Saved to txt file")
