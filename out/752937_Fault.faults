@@ -1,0 +1,293 @@
+3: Operator:
+Normal stop activated
+4: Operator:
+Incorrect operating mode selected
+5: Compressed air:
+Monitoring inlet pressure
+6: Ethercat:
+Fault
+7: Compressed air:
+Monitoring safe shutdown
+8: HMI:
+Fault communication to control
+11: Motion drives:
+Overload power supply
+12: Motion controller:
+0 : No error code active
+13: Machine:
+Reference not set to zero
+15: Control-PC:
+Used disk space exceeds 90%
+16: Machine:
+Handwheel is engaged
+17: Operator:
+Operating mode change
+20: Batch control:
+Partial batch obtained
+21: Batch control:
+Complete batch obtained
+22: Vacuum:
+Overload pump
+23: Vacuum:
+Monitoring negative pressure
+26: Control cabinet:
+Com error safety plc
+28: Control cabinet:
+Monitoring error safety plc
+30: Machine:
+Was raced backwards
+34: Machine:
+Repair switch drives switched off
+35: Control cabinet:
+Monitoring main switch
+41: Control cabinet S2:
+Overtemperature
+42: Control cabinet S1:
+Overtemperature
+43: Control cabinet:
+Voltage monitoring
+45: Control cabinet:
+UPS not ready
+77: Machine:
+Fault monitoring contactors dropped away
+79: Emergency stop activated: Line
+81: Emergency stop activated: Operating panel
+83: Guard basic machine:
+Safety circuit not active
+87: Guard open:
+Carton belt
+89: Guard open:
+Discharge front
+90: Guard open:
+Control cabinet swiveled off left
+91: Guard open:
+Control cabinet swiveled off right
+96: Guard open:
+Handwheel
+100: Guard open: product chain 1
+104: Guard open:
+Infeed
+110: Product sensing:
+Consecutive fault exceed height
+112: Product sensing:
+Sensor monitoring
+113: Product sensing:
+Sensor monitoring exceed height
+120: Insertion:
+Safety sensor
+123: Insertion:
+Overload
+124: Guard open:
+Slide in
+129: Insertion:
+Monitoring sensor safety sensor
+134: Guard open:
+Below slide in
+196: Motion drive main drive:
+Fault
+198: Motion drive main drive:
+0 : No error code active
+200: Machine:
+Jam at discharge
+201: Downstream:
+Stop from Machine 1
+203: Downstream:
+Stop from Machine 2
+210: Guard open:
+Carton magazine
+212: Guard open:
+Discharge top
+213: Carton:
+Overload side flap folder
+220: Carton:
+Stock at the end
+221: Machine:
+Cover rail open
+222: Carton:
+Consecutive fault crosscheck
+223: Carton:
+Pickup check
+224: Carton belt:
+Overload
+225: Carton:
+Consecutive fault code reader
+226: Carton:\Fault code reader
+227: Carton:
+Sensor monitoring crosscheck
+230: Glue unit:
+Operating temperature not reached
+231: Glue unit:
+Device not ready
+232: Glue unit:
+Glue level is too low
+233: Glue station 1:
+Consecutive fault carton sensing
+235: Glue station 1:
+Sensor monitoring carton sensing
+237: Carton:
+Sensor monitoring pickup check
+250: Carton ejection 1:
+Overfill collecting container
+251: Carton ejection 1:
+Cross check
+254: Carton ejection 1:
+Sensor monitoring cross check
+272: Carton: Open flap:
+Sensor monitoring side flap rear
+273: Carton: Open flap:
+Sensor monitoring side flap front
+294: Carton: Open flap: Consecutive fault side flap
+299: Parameter fault
+Cam start >Carton: Open flap: Sign in register< later than Cam start >Carton: Ejection 1<
+301: Leaflet:
+Consecutive fault cross check in product chain
+302: Leaflet:
+Cross check ejection
+304: Leaflet:
+Consecutive fault cross check in unit
+311: Guard open:
+Leaflet unit top
+312: Guard open:
+Leaflet unit rear
+321: Leaflet:
+Consecutive fault code reader rear
+322: Leaflet:
+Consecutive fault cross check in carton
+324: Leaflet:
+Fault code reader rear
+325: Leaflet:
+Sensor monitoring cross check in carton
+326: Leaflet:
+Sensor monitoring cross check in product chain
+327: Leaflet:
+Sensor monitoring cross check in unit
+347: Leaflet:
+Sensor monitoring code reader rear
+380: Motion drive leaflet unit:
+0 : No error code active
+382: Motion drive leaflet unit:
+Fault
+404: Robot:
+Motion drive: Overload power supply
+412: Robot:
+Emergency stop front activated
+414: Robot:
+Guard open: Product chain
+417: Robot:
+Guard open: Turn around product chain
+421: Robot:
+Guard open: Front left
+422: Robot:
+Guard open: Front right
+436: Robot:
+Guard open: Cycle belt
+455: Robot:
+Collision range
+457: Robot:
+Monitoring compressed air
+477: Robot:
+Control cabinet: Overtemperature
+478: Robot:
+Motion control: Fault
+480: Robot:
+Motion drive axis A: Fault
+481: Robot:
+Motion drive axis B: Fault
+482: Robot:
+Motion drive axis C: Fault
+483: Robot:
+Motion drive rotary axis: Fault
+486: Robot:
+Motion drive axis A:
+0 : No error code active
+487: Robot:
+Motion drive axis B:
+0 : No error code active
+488: Robot:
+Motion drive axis C:
+0 : No error code active
+489: Robot:
+Motion drive rotaty axis:
+0 : No error code active
+494: Robot:
+Motion drive infeed belt: Fault
+495: Robot:
+Motion drive infeed belt:
+0 : No error code active
+512: Infeed:
+Emergency stop front activated
+517: Infeed:
+Guard open
+530: Infeed:
+Belt 1: Overload
+541: Infeed:
+Belt 1: Fault
+551: Infeed:
+Belt 1: Product jam
+850: Leaflet:
+No error code active
+851: Leaflet: Turret:
+No error code active
+852: Leaflet:
+OPC-UA Timeout communication
+853: Leaflet: Turret:
+OPC-UA Timeout communication
+1212: Guard open:
+Collecting container 1
+1213: Carton ejection 1:
+Overfill guard collecting container
+1219: Carton belt:
+Upper position not reached
+1220: Carton belt:
+Monitoring check valve 1V3
+1221: Carton belt:
+Monitoring check valve 1V4
+1246: Carton:
+Sensor monitoring check code
+1248: Carton: Open flap:
+Sensor monitoring fourth flap
+1249: Carton: Open flap: Consecutive fault fourth flap
+1416: Robot:
+Emergency stop rear activated
+1417: Robot:
+Guard open: Rear left
+1419: Robot:
+Range limit reached
+1433: Robot:
+Vacuum monitor: Suction cup 1
+1434: Robot:
+Vacuum monitor: Suction cup 2
+1435: Robot:
+Vacuum monitor: Suction cup 3
+1513: Infeed:
+Remove product before reference/synchron run
+1530: Infeed:
+Belt 1: Product reject (Inhaler): Bin overfill
+1531: Infeed:
+Belt 1: Product reject (Inhaler): Cross check
+1543: Infeed: Control cabinet:
+Voltage monitoring
+2004: Infeed:
+Overhead conveyor not in lower position
+2005: Carton reject 1:
+Cross check carton rejected
+2006: Carton reject 1:
+Sensor monitoring Cross check carton rejected
+2007: Infeed:
+Consecutive fault check position inhaler
+2008: Infeed:
+Check position inhaler: Device not ready
+2009: Infeed:
+Check position inhaler: Sensor monitoring
+2014: Infeed:
+Motion drives overhead conveyor: Fault
+2015: Infeed:
+Motion drives overhead conveyor: 0 : No error code active
+2016: Infeed:
+Cross check eject belt 1 (Inhaler): Sensor monitoring
+2018: Infeed:
+Sensing product (Inhaler): Sensor monitoring
+2024: Infeed:
+Overhead conveyor not in upper position
+2025: Infeed:
+Overhead conveyor: Monitoring check valve 1V21
