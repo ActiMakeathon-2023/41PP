@@ -3,7 +3,7 @@ from openai import OpenAI, chat
 import docx
 import csv
 
-client = OpenAI(api_key="sk-q4pvdpXQRl1kFJ3w5NLsi4HXtl9zBXIPp9")
+client = OpenAI(api_key="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")
 def cmp_de_en(de, en):
     msg = "Here are two strings, one in German one in English, can you tell me if they have the same meaning, German:"
     msg = msg + de
@@ -72,26 +72,27 @@ if machine_number == "100223" or machine_number == "100261" or machine_number ==
                     code_in[mst_key] = Machine[mach_key]
                     break
         code_out[mach_key] = Machine[mach_key].replace("\n", " ")
+        
+        
+    #save file
+    while True:
+        file_type = input("Enter file type:")
+        if file_type == "csv" or file_type == "txt":
+            break
+        print("please enter 'txt' or 'csv'")
+
+    if file_type == "csv":
+        with open("report_"+machine_number+".csv", 'w') as csv_file:  
+            writer = csv.writer(csv_file)
+            for key, value in code_out.items():
+               writer.writerow([key, value])
+        print("Saved to csv file")
+    elif file_type == "txt":
+        with open("report_"+machine_number+".txt", 'w') as file:
+            for key, value in code_out.items():
+                file.write(f"FaultNo.:{key} corresponds to: {value}\n")
+        print("Saved to txt file")
+        
+
 else:
     print("Machine not found")
-
-
-
-#save file
-while True:
-    file_type = input("Enter file type:")
-    if file_type == "csv" or file_type == "txt":
-        break
-    print("please enter 'txt' or 'csv'")
-
-if file_type == "csv":
-    with open("report_"+machine_number+".csv", 'w') as csv_file:  
-        writer = csv.writer(csv_file)
-        for key, value in code_out.items():
-           writer.writerow([key, value])
-    print("Saved to csv file")
-elif file_type == "txt":
-    with open("report_"+machine_number+".txt", 'w') as file:
-        for key, value in code_out.items():
-            file.write(f"FaultNo.:{key} corresponds to: {value}\n")
-    print("Saved to txt file")
