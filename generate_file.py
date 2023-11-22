@@ -2,7 +2,7 @@ import pandas as pd
 from openai import OpenAI, chat
 import docx
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="sk-q4pvdpXQRl1kFJ3w5NLsi4HXtl9zBXIPp9")
 def cmp_de_en(de, en):
     msg = "Here are two strings, one in German one in English, can you tell me if they have the same meaning, German:"
     msg = msg + de
